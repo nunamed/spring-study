@@ -28,8 +28,6 @@ public class IdkProxyExample implements InvocationHandler {
 		//调用前置方法
 		if(interceptor.before(proxy,target,method,args)) {
 			//反射原有对象方法
-			System.out.println("进入代理逻辑方法");
-			System.out.println("在调度真实对象之前的服务");
 			result = method.invoke(target, args);
 		}else {//返回false执行around方法
 			interceptor.around(proxy, target, method, args);

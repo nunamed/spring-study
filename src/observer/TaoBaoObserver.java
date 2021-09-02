@@ -15,8 +15,11 @@ public class TaoBaoObserver implements Observer {
 		ProductList observable = ProductList.getInstance();
 		TaoBaoObserver taoBaoObserver = new TaoBaoObserver();
 		JingDongObserver jdobserver = new JingDongObserver();
-		observable.addObserver(jdobserver);
-		observable.addObserver(taoBaoObserver);
+		observable.addProductListObserver(jdobserver);
+		observable.addProductListObserver(taoBaoObserver);
 		observable.addProduct("新增产品");
+		observable.addProduct("新增产品1");
+		observable.addProduct("新增产品2");
+		observable.addProduct("新增产品3");
 	}
 }

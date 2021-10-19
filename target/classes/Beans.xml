@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<!-- <bean id="helloWorld" class="net.biancheng.HelloWord" init-method="init" destroy-method="destroy">
+		 <property name="message" value="Hello World!" />
+	</bean>
+	<bean class="net.biancheng.InitHelloWorld"></bean>
+	<bean class="net.biancheng.Init"></bean> -->
+	<!-- <bean id="man" class="net.biancheng.Man">
+		<property name="name" value="nee"></property>
+		<property name="age" value="25"></property>
+	</bean>
+	<bean id="person" class="net.biancheng.Person">
+        <property name="man" ref="man"></property>
+    </bean> -->
+    <bean id="javaCollection" class="net.biancheng.JavaCollection">
+    	<property name="manList">
+    		<list>
+    			<value>壹佰贰拾叁</value>
+    			<value>叁佰叁拾叁</value>
+    		</list>
+    	</property>
+    	<property name="manSet">
+    		<set>
+    			<value>壹佰贰拾叁</value>
+    			<value>叁佰叁拾叁</value>
+    		</set>
+    	</property>
+    	<property name="manMap">
+    		<map>
+    			<entry key="1" value="壹佰贰拾叁"></entry>
+    			<entry key="2" value="叁佰叁拾叁"></entry>
+    		</map>
+    	</property>
+    	<property name="manProp">
+    		<props>
+    			<prop key="one">壹佰贰拾叁</prop>
+    			<prop key="two">叁佰叁拾叁</prop>
+    		</props>
+    	</property>
+    </bean>
+</beans>

@@ -24,7 +24,7 @@ public class IdkProxyExample implements InvocationHandler {
 		}
 		Object result = null;
 		//通过反射生成拦截器
-		Interceptor interceptor = (Interceptor) Class.forName(interceptorClass).newInstance();
+		Interceptor interceptor = (Interceptor) Class.forName(interceptorClass).getConstructor().newInstance();
 		//调用前置方法
 		if(interceptor.before(proxy,target,method,args)) {
 			//反射原有对象方法
